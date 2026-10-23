@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>C++技术论坛</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <h1>C++技术论坛</h1>
+    <a href="/post" class="btn">📝 发布新帖</a>
+</header>
+
+<div class="list">
+    {% for item in posts %}
+    <div class="card">
+        <h3><a href="/detail?id={{item.id}}">{{ item.title }}</a></h3>
+        <div class="info">作者：{{item.author}} | {{item.time}}</div>
+        <p>{{ item.content[:100] }}...</p>
+    </div>
+    {% else %}
+    <p>暂无帖子，快来发第一条吧！</p>
+    {% endfor %}
+</div>
+
+</body>
+</html>

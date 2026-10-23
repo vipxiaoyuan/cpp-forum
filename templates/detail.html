@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{{post.title}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<a href="/" class="back">← 返回首页</a>
+<div class="card">
+    <h2>{{post.title}}</h2>
+    <div class="info">作者：{{post.author}} | {{post.time}}</div>
+    <pre style="white-space:pre-wrap;margin-top:16px;line-height:1.7;">{{ post.content }}</pre>
+</div>
+</body>
+</html>
